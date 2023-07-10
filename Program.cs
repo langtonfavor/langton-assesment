@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace YourNamespace
+namespace langton
 {
     public class Program
     {

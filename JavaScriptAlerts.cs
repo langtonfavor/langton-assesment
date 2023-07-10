@@ -2,7 +2,7 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace YourNamespace
+namespace langton
 {
     [TestFixture]
     public class JavaScriptAlertsTests
@@ -21,19 +21,19 @@ namespace YourNamespace
         {
            driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/javascript_alerts");
 
-    // Find and click the "Click for JS Alert" button
-    IWebElement alertButton = driver.FindElement(By.XPath("//button[text()='Click for JS Alert']"));
-    alertButton.Click();
+          // Find and click the "Click for JS Alert" button
+          IWebElement alertButton = driver.FindElement(By.XPath("//button[text()='Click for JS Alert']"));
+          alertButton.Click();
 
-    // Switch to the alert and accept it
-    IAlert alert = driver.SwitchTo().Alert();
-    string alertText = alert.Text; // For debugging/logging
-    alert.Accept();
+          // Switch to the alert and accept it
+          IAlert alert = driver.SwitchTo().Alert();
+          string alertText = alert.Text; // For debugging/logging
+          alert.Accept();
 
-    // Verify the result text
-    IWebElement result = driver.FindElement(By.Id("result"));
-    string resultText = result.Text; // For debugging/logging
-    Assert.AreEqual("You successfully clicked an alert", result.Text);
+          // Verify the result text
+          IWebElement result = driver.FindElement(By.Id("result"));
+
+          Assert.AreEqual("You successfully clicked an alert", result.Text);
 
         }
 
